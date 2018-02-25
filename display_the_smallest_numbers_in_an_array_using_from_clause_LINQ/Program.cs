@@ -1,0 +1,28 @@
+﻿/*
+ *  C# Program to Display the Smallest numbers in an Array using FROM Clause LINQ
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace display_the_smallest_numbers_in_an_array_using_from_clause_LINQ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = { 50, 30, 45, 10, 60, 100, 500, 300, 40, 22, 44, 55, 66, 1000 };
+            var program = from num in numbers
+                          where num < 50
+                          select num;
+            Console.WriteLine("Numbers less than 50 are :");
+            foreach (int i in program)
+            {
+                Console.Write(i + " ");
+            }
+            Console.ReadLine();
+        }
+    }
+}
